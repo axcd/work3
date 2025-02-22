@@ -70,8 +70,11 @@
 # view AndroidManifest.xml #generated:30
 -keep class com.mao.work3.activity.UpdateActivity { <init>(...); }
 
-# view res/layout/page_two_update.xml #generated:255
--keep class com.mao.work3.layout.MyRadioGroup { <init>(...); }
+# view res/layout/page_two_update.xml #generated:162
+-keep class com.mao.work3.layout.FakeRadioGroup { <init>(...); }
+
+# view res/layout/page_two_update.xml #generated:185
+-keep class com.mao.work3.layout.HourRadioGroup { <init>(...); }
 
 # view res/layout/page_two_day_view.xml #generated:9
 -keep class com.mao.work3.view.DayView { <init>(...); }
@@ -90,9 +93,9 @@
 # onClick res/layout/page_three_dialog.xml #generated:96
 -keepclassmembers class * { *** num(...); }
 
-# onClick res/layout/page_two_update.xml #generated:277
+# onClick res/layout/page_two_update.xml #generated:207
 -keepclassmembers class * { *** onDelete(...); }
 
-# onClick res/layout/page_two_update.xml #generated:288
+# onClick res/layout/page_two_update.xml #generated:218
 -keepclassmembers class * { *** onInsert(...); }
 

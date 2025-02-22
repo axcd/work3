@@ -1,9 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-	<declare-styleable name="MyRadioGroup">
+	
+	<declare-styleable name="HourRadioGroup">
 	    <attr name="text" format="string" />
 	    <attr name="m" format="integer"/>
 	    <attr name="n" format="integer"/>
 	    <attr name="color" />
 	</declare-styleable>
+	
+	<declare-styleable name="FakeRadioGroup">
+	    <attr name="text" format="string" />
+	    <attr name="m" format="integer"/>
+	    <attr name="n" format="integer"/>
+	    <attr name="color" />
+	</declare-styleable>
+	
 </resources>

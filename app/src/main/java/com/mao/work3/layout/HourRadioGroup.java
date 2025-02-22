@@ -8,7 +8,7 @@ import com.mao.work3.*;
 import android.content.res.*;
 import com.mao.work3.config.*;
 
-public class MyRadioGroup extends RadioGroup
+public class HourRadioGroup extends RadioGroup
 {
 	private int m;
 	private int n;
@@ -17,23 +17,23 @@ public class MyRadioGroup extends RadioGroup
 	public static int y;
 	private int childCount = 49;
 	
-	public MyRadioGroup(Context context)
+	public HourRadioGroup(Context context)
 	{
 		super(context);
 	}
 
-	public MyRadioGroup(Context context, AttributeSet attrs)
+	public HourRadioGroup(Context context, AttributeSet attrs)
 	{
 		super(context, attrs);
 
 		//获取xml配置
-		TypedArray t = context.obtainStyledAttributes(attrs,R.styleable.MyRadioGroup);
-		m = t.getInteger(R.styleable.MyRadioGroup_m,15);
-		n = t.getInteger(R.styleable.MyRadioGroup_n,6);
+		TypedArray t = context.obtainStyledAttributes(attrs,R.styleable.HourRadioGroup);
+		m = t.getInteger(R.styleable.HourRadioGroup_m,15);
+		n = t.getInteger(R.styleable.HourRadioGroup_n,6);
 		
 		for(int i=0;i<childCount;i++)
 		{
-			RadioButton rb = (RadioButton)LayoutInflater.from(context).inflate(R.layout.page_two_update_radio,null,false);
+			RadioButton rb = (RadioButton)LayoutInflater.from(context).inflate(R.layout.page_two_update_hour_radio,null,false);
 			if(i%2!=0) rb.setText(i*0.5+"h");else rb.setText(i/2+"h");
 			this.addView(rb);
 		}

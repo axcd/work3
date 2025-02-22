@@ -87,9 +87,7 @@ public class UpdateActivity extends AppCompatActivity
 			for(Note note : month.getDay(d).getNotes())
 			{
 				String strr = note.getRate().getRateName();
-				if(note.getFake().equals(Fake.PAID))
-					strr = "1.0倍";
-				if(note.getFake().equals(Fake.LEAVE))
+				if(note.getFake().equals(Fake.PAID) || note.getFake().equals(Fake.LEAVE) || note.getFake().equals(Fake.BEREAVEMENT) || note.getFake().equals(Fake.CAREGIVER) || note.getFake().equals(Fake.CHILDCARE))
 					strr = "1.0倍";
 				if(note.getFake().equals(Fake.SICK))
 					strr = "0.7倍";
@@ -188,9 +186,9 @@ public class UpdateActivity extends AppCompatActivity
 				{
 					int x = 0;
 					if (i < 36)
-						x = i/6 * MyRadioGroup.y + 10;
+						x = i/6 * HourRadioGroup.y + 10;
 					else
-						x = 6 * MyRadioGroup.y + 10;
+						x = 6 * HourRadioGroup.y + 10;
 					hourScrollView.scrollTo(0, x);
 				}
 			});

@@ -27,7 +27,7 @@
 		android:layout_height="match_parent"
 		android:orientation="vertical"
 		android:layout_gravity="center"
-		android:background="@color/skyblue">
+		android:background="@color/linen">
 		
 		<TextView
 			android:layout_width="wrap_content"
@@ -159,86 +159,16 @@
 
 		</RadioGroup>
 
-		<RadioGroup
+		<com.mao.work3.layout.FakeRadioGroup
 			android:layout_height="wrap_content"
-			android:layout_width="match_parent"
-			android:gravity="center"
-			android:orientation="horizontal"
+			android:layout_width="wrap_content"
 			android:background="#FFFEF3FE"
-			android:id="@+id/fakeRadioGroup">
-
-            <RadioButton
-                android:layout_height="match_parent"
-                android:layout_width="match_parent"
-                android:gravity="center"
-                android:button="@null"
-                android:background="@drawable/fake1"
-                android:text="加班"
-                android:layout_weight="1.0"
-                android:padding="5dp"
-                android:layout_marginLeft="5dp"
-                android:layout_marginRight="5dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginBottom="10dp"/>
-            
-            <RadioButton
-                android:layout_height="match_parent"
-                android:layout_width="match_parent"
-                android:gravity="center"
-                android:button="@null"
-                android:background="@drawable/fake2"
-                android:text="调休"
-                android:layout_weight="1.0"
-                android:padding="5dp"
-                android:layout_marginLeft="5dp"
-                android:layout_marginRight="5dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginBottom="10dp"/>
-
-            <RadioButton
-                android:layout_height="match_parent"
-                android:layout_width="match_parent"
-                android:gravity="center"
-                android:button="@null"
-                android:background="@drawable/fake3"
-                android:text="年假"
-                android:layout_weight="1.0"
-                android:padding="5dp"
-                android:layout_marginLeft="5dp"
-                android:layout_marginRight="5dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginBottom="10dp"/>
-            
-			<RadioButton
-				android:layout_height="match_parent"
-				android:layout_width="match_parent"
-				android:gravity="center"
-				android:button="@null"
-				android:background="@drawable/fake4"
-				android:text="事假"
-				android:layout_weight="1.0"
-				android:padding="5dp"
-				android:layout_marginLeft="5dp"
-				android:layout_marginRight="5dp"
-				android:layout_marginTop="10dp"
-				android:layout_marginBottom="10dp"/>
-
-			<RadioButton
-				android:layout_height="match_parent"
-				android:layout_width="match_parent"
-				android:gravity="center"
-				android:button="@null"
-				android:background="@drawable/fake5"
-				android:text="病假"
-				android:layout_weight="1.0"
-				android:padding="5dp"
-				android:layout_marginLeft="5dp"
-				android:layout_marginRight="5dp"
-				android:layout_marginTop="10dp"
-				android:layout_marginBottom="10dp"/>
-
-		</RadioGroup>
-
+			android:gravity="center"
+			mao:m="15"
+			mao:n="6"
+			android:orientation="horizontal"
+			android:id="@+id/fakeRadioGroup"/>
+		
 		<View
 			android:layout_width="match_parent"
 			android:layout_height="3px"
@@ -252,7 +182,7 @@
 			android:background="#7FF7F78C"
 			android:id="@+id/hourScrollView">
 
-			<com.mao.work3.layout.MyRadioGroup
+			<com.mao.work3.layout.HourRadioGroup
 				android:layout_height="wrap_content"
 				android:layout_width="wrap_content"
 				android:gravity="center"
