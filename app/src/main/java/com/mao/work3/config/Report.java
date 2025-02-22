@@ -140,19 +140,19 @@ public class Report
 						}
 						
 						//丧假
-						if (Fake.LEAVE.equals(note.getFake()))
+						if (Fake.BEREAVEMENT.equals(note.getFake()))
 						{
 							String key = "丧假(时)";
 							this.set(key, this.get(key) + hour);
 						}
 						//陪护假
-						if (Fake.SICK.equals(note.getFake()))
+						if (Fake.CAREGIVER.equals(note.getFake()))
 						{
 							String key = "陪护假(时)";
 							this.set(key, this.get(key) + hour);
 						}
 						//育儿假
-						if (Fake.PAID.equals(note.getFake()))
+						if (Fake.CHILDCARE.equals(note.getFake()))
 						{
 							String key = "育儿假(时)";
 							this.set(key, this.get(key) + hour);
