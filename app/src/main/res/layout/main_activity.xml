@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:id="@+id/LinearLayout1"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:orientation="vertical"
+	tools:context=".MainActivity">
+	
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:orientation="vertical"
+		android:gravity="center"
+		android:background="#F0FFFFFF">
+		
+	<LinearLayout
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:orientation="vertical"
+		android:gravity="center">
+		
+		<TextView
+			android:layout_height="wrap_content"
+			android:layout_width="wrap_content"
+			android:layout_centerInParent="true"
+			android:text="2020年9月"
+			android:typeface="sans"
+			android:textStyle="bold"
+			android:layout_weight="1.0"
+			android:padding="5dp"
+			android:textSize="22sp"
+			android:gravity="bottom"
+			android:id="@+id/YYYYMM"/>
+		
+		<TextView
+			android:layout_height="1dp"
+			android:layout_width="165dp"
+			android:background="#F06F6996"/>
+
+	</LinearLayout>
+	
+	</LinearLayout>
+
+	<LinearLayout
+		android:layout_width="fill_parent"
+		android:layout_height="40dp"
+		android:paddingTop="10dp"
+		android:paddingBottom="7dp"
+		android:background="#F0FFFFFF">
+
+		<TextView
+			android:id="@+id/tv_one"
+			android:layout_width="fill_parent"
+			android:layout_height="fill_parent"
+			android:layout_weight="1.0"
+			android:gravity="center"
+			android:text="统计"
+			android:textColor="#FF000666"
+			android:textSize="17sp"/>
+
+		<TextView
+			android:id="@+id/tv_two"
+			android:layout_width="fill_parent"
+			android:layout_height="fill_parent"
+			android:layout_weight="1.0"
+			android:gravity="center"
+			android:text="日历"
+			android:textColor="#FF000666"
+			android:textSize="17sp"/>
+
+		<TextView
+			android:id="@+id/tv_three"
+			android:layout_width="fill_parent"
+			android:layout_height="fill_parent"
+			android:layout_weight="1.0"
+			android:gravity="center"
+			android:text="设置"
+			android:textColor="#FF000666"
+			android:textSize="17sp"/>
+
+	</LinearLayout>
+
+	<LinearLayout
+		android:layout_height="wrap_content"
+		android:layout_width="match_parent"
+		android:background="#FF0F0F0F"
+		android:orientation="horizontal">
+
+		<ImageView
+			android:id="@+id/img_cursor"
+			android:layout_width="match_parent"
+			android:layout_height="2dp"
+			android:scaleType="matrix"
+			android:src="@mipmap/line"/>
+
+	</LinearLayout>
+
+	<android.support.v4.view.ViewPager
+		android:id="@+id/vpager"
+		android:layout_width="wrap_content"
+		android:layout_height="0dp"
+		android:layout_gravity="center"
+		android:layout_weight="1.0"/>
+	
+	<LinearLayout
+		android:layout_height="wrap_content"
+		android:layout_width="match_parent"
+		android:background="#F0FFFFFF"
+		android:gravity="center"
+		android:padding="10dp">
+
+		<Button
+			android:id="@+id/preyear"
+			android:layout_height="wrap_content"
+			android:layout_width="wrap_content"
+			android:text="上年"
+			android:textStyle="bold"
+			android:layout_weight="1.0"
+			android:textSize="15sp"
+			android:gravity="center"/>
+
+		<Button
+			android:id="@+id/premonth"
+			android:layout_height="wrap_content"
+			android:layout_width="wrap_content"
+			android:layout_alignParentLeft="true"
+			android:text="上月"
+			android:textStyle="bold"
+			android:layout_weight="1.0"
+			android:textSize="15sp"
+			android:gravity="center"/>
+
+		
+		<Button
+			android:id="@+id/nextmonth"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_alignParentRight="true"
+			android:text="下月"
+			android:textStyle="bold"
+			android:layout_weight="1.0"
+			android:textSize="15sp"
+			android:gravity="center"/>
+
+		<Button
+			android:id="@+id/nextyear"
+			android:layout_height="wrap_content"
+			android:layout_width="wrap_content"
+			android:text="下年"
+			android:layout_weight="1.0"
+			android:textSize="15sp"
+			android:gravity="center"
+			android:textStyle="bold"/>
+		
+	</LinearLayout>
+
+</LinearLayout>
+
