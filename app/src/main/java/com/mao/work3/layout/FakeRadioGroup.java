@@ -34,7 +34,13 @@ public class FakeRadioGroup extends RadioGroup
 
 		for(int i=0;i<childCount;i++)
 		{
-			RadioButton rb = (RadioButton)LayoutInflater.from(context).inflate(R.layout.page_two_update_fake_radio,null,false);
+			RadioButton rb = null;
+			if(i==0){
+				rb = (RadioButton)LayoutInflater.from(context).inflate(R.layout.page_two_update_fake_radio,null,false);
+				
+			}else{
+				rb = (RadioButton)LayoutInflater.from(context).inflate(R.layout.page_two_update_fake1_radio,null,false);
+			}
 			rb.setText(fakes[i]);
 			this.addView(rb);
 		}
