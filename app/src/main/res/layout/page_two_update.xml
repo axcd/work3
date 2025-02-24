@@ -19,7 +19,7 @@
 
 	<View
 		android:layout_width="match_parent"
-		android:layout_height="4px"
+		android:layout_height="3px"
 		android:background="@color/fuchsia"/>
 
 	<LinearLayout
@@ -41,7 +41,7 @@
 	
 	<View
 		android:layout_width="match_parent"
-		android:layout_height="3px"
+		android:layout_height="2px"
 		android:background="@color/red"/>
 
 	<LinearLayout
@@ -171,7 +171,7 @@
 		
 		<View
 			android:layout_width="match_parent"
-			android:layout_height="3px"
+			android:layout_height="5px"
 			android:background="@color/pink"/>
 
 		<ScrollView
@@ -194,7 +194,12 @@
 				android:id="@+id/hourRadioGroup"/>
 
 		</ScrollView>
-
+		
+		<View
+			android:layout_width="match_parent"
+			android:layout_height="5px"
+			android:background="@color/pink"/>
+		
 		<LinearLayout
 			android:layout_height="wrap_content"
 			android:layout_width="wrap_content"

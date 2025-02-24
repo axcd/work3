@@ -93,9 +93,9 @@
 # onClick res/layout/page_three_dialog.xml #generated:96
 -keepclassmembers class * { *** num(...); }
 
-# onClick res/layout/page_two_update.xml #generated:207
+# onClick res/layout/page_two_update.xml #generated:212
 -keepclassmembers class * { *** onDelete(...); }
 
-# onClick res/layout/page_two_update.xml #generated:218
+# onClick res/layout/page_two_update.xml #generated:223
 -keepclassmembers class * { *** onInsert(...); }
 
