@@ -225,7 +225,11 @@ public class DayView extends TextView
 					int baseLineY = (int) (rect.centerY() - top / 2 - bottom / 2);//基线中间点的y轴计算公式
 					canvas.drawText(hour, rect.centerX(), baseLineY, paint);
 
-					if(day.getNotes().size()>1)
+//					if(Shift.REST.equals(day.getShift())){
+//						day.getNotes().clear();
+//					}
+					
+					if(day.getNotes().size()>1 && !Shift.REST.equals(day.getShift()))
 					{
 						paint.setColor(Color.parseColor("#CCFF0000"));
 						canvas.drawCircle( R, 0, R/7 , paint );

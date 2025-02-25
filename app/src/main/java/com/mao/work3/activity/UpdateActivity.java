@@ -81,22 +81,6 @@ public class UpdateActivity extends AppCompatActivity
 		//回显
 		display();
 		
-		String str = "";
-		if(null != month.getDay(d)){
-			
-			for(Note note : month.getDay(d).getNotes())
-			{
-				String strr = note.getRate().getRateName();
-				if(note.getFake().equals(Fake.PAID) || note.getFake().equals(Fake.LEAVE) || note.getFake().equals(Fake.BEREAVEMENT) || note.getFake().equals(Fake.CAREGIVER) || note.getFake().equals(Fake.CHILDCARE))
-					strr = "1.0倍";
-				if(note.getFake().equals(Fake.SICK))
-					strr = "0.7倍";
-				str += note.getFake().getFakeName()+"\t\t\t"+strr+"\t\t\t"+note.getHour().getHourName()+"\n";
-			}
-
-			notesView.setText(str.substring( 0, str.length()-1));
-		}
-
 	}
 	
 	public void addListener()
@@ -157,9 +141,31 @@ public class UpdateActivity extends AppCompatActivity
 		{
 			shift = day.getShift();
 			Note note = day.findNote();
-			rate = note.getRate();
-			fake = note.getFake();
-			hour = note.getHour();
+			
+			if(null!=note){
+				rate = note.getRate();
+				fake = note.getFake();
+				hour = note.getHour();
+			}
+
+			String str = "";
+			if(!Shift.REST.equals(month.getDay(d).getShift())){
+
+				for(Note tmp : month.getDay(d).getNotes())
+				{
+					String strr = tmp.getRate().getRateName();
+					if(tmp.getFake().equals(Fake.PAID) || tmp.getFake().equals(Fake.LEAVE) 
+						|| tmp.getFake().equals(Fake.BEREAVEMENT) || tmp.getFake().equals(Fake.CAREGIVER) 
+					   || tmp.getFake().equals(Fake.CHILDCARE)
+					   || tmp.getFake().equals(Fake.CHILDBIRTH) || tmp.getFake().equals(Fake.PATERNITY)  )
+						strr = "1.0倍";
+					if(tmp.getFake().equals(Fake.SICK))
+						strr = "0.7倍";
+					str += tmp.getFake().getFakeName()+"\t\t\t"+strr+"\t\t\t"+tmp.getHour().getHourName()+"\n";
+				}
+
+				notesView.setText(str.substring( 0, str.length()-1));
+			}
 		}
 		
 		int n = Shift.indexOf(shift);
@@ -249,6 +255,11 @@ public class UpdateActivity extends AppCompatActivity
 		if( null == day ){
 			day = new Day(date, shift);
 		}
+		
+//		if (shift.equals(Shift.REST))
+//		{
+//			day.getNotes().clear();
+//		}
 		
 		day.update(shift, fake, rate, hour); 
 		Config.getSelectedView().setDay(day);

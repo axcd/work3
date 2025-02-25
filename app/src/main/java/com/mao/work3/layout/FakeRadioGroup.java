@@ -15,8 +15,8 @@ public class FakeRadioGroup extends RadioGroup
 	private int w;
 	private int h;
 	//public static int y;
-	private int childCount = 8;
-	private String[] fakes = {"加班", "调休", "年假", "事假", "病假", "丧假", "陪护假", "育儿假"};
+	private int childCount = 10;
+	private String[] fakes = {"加班", "调休", "年假", "事假", "病假", "丧假", "护理假", "育儿假", "产假", "陪产假"};
 
 	public FakeRadioGroup(Context context)
 	{

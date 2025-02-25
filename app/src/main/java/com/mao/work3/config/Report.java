@@ -145,16 +145,29 @@ public class Report
 							String key = "丧假(时)";
 							this.set(key, this.get(key) + hour);
 						}
-						//陪护假
+						//护理假
 						if (Fake.CAREGIVER.equals(note.getFake()))
 						{
-							String key = "陪护假(时)";
+							String key = "护理假(时)";
 							this.set(key, this.get(key) + hour);
 						}
 						//育儿假
 						if (Fake.CHILDCARE.equals(note.getFake()))
 						{
 							String key = "育儿假(时)";
+							this.set(key, this.get(key) + hour);
+						}
+						
+						//产假
+						if (Fake.CAREGIVER.equals(note.getFake()))
+						{
+							String key = "产假(时)";
+							this.set(key, this.get(key) + hour);
+						}
+						//陪产假
+						if (Fake.CHILDCARE.equals(note.getFake()))
+						{
+							String key = "陪产假(时)";
 							this.set(key, this.get(key) + hour);
 						}
 					}
