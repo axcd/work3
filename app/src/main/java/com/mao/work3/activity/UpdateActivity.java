@@ -157,7 +157,8 @@ public class UpdateActivity extends AppCompatActivity
 					if(tmp.getFake().equals(Fake.PAID) || tmp.getFake().equals(Fake.LEAVE) 
 						|| tmp.getFake().equals(Fake.BEREAVEMENT) || tmp.getFake().equals(Fake.CAREGIVER) 
 					   || tmp.getFake().equals(Fake.CHILDCARE)
-					   || tmp.getFake().equals(Fake.CHILDBIRTH) || tmp.getFake().equals(Fake.PATERNITY)  )
+					   || tmp.getFake().equals(Fake.CHILDBIRTH) || tmp.getFake().equals(Fake.PATERNITY) 
+					   )
 						strr = "1.0倍";
 					if(tmp.getFake().equals(Fake.SICK))
 						strr = "0.7倍";

@@ -7,6 +7,7 @@ import android.view.*;
 import com.mao.work3.*;
 import android.content.res.*;
 import com.mao.work3.config.*;
+import com.mao.work3.enum.*;
 
 public class FakeRadioGroup extends RadioGroup
 {
@@ -15,8 +16,8 @@ public class FakeRadioGroup extends RadioGroup
 	private int w;
 	private int h;
 	//public static int y;
-	private int childCount = 10;
-	private String[] fakes = {"加班", "调休", "年假", "事假", "病假", "丧假", "护理假", "育儿假", "产假", "陪产假"};
+	private int childCount = Fake.size();
+//	private String[] fakes = {"加班", "调休", "年假", "事假", "病假", "丧假", "护理假", "育儿假", "产假", "陪产假"};
 
 	public FakeRadioGroup(Context context)
 	{
@@ -41,7 +42,8 @@ public class FakeRadioGroup extends RadioGroup
 			}else{
 				rb = (RadioButton)LayoutInflater.from(context).inflate(R.layout.page_two_update_fake1_radio,null,false);
 			}
-			rb.setText(fakes[i]);
+			
+			rb.setText(Fake.getString(i));
 			this.addView(rb);
 		}
 

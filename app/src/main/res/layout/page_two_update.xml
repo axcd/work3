@@ -164,8 +164,8 @@
 			android:layout_width="wrap_content"
 			android:background="#FFFEF3FE"
 			android:gravity="center"
-			mao:m="15"
-			mao:n="6"
+			mao:m="40"
+			mao:n="5"
 			android:orientation="horizontal"
 			android:id="@+id/fakeRadioGroup"/>
 		

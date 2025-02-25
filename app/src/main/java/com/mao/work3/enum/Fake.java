@@ -25,6 +25,14 @@ public enum Fake implements Serializable
 		return this.fake;
 	}
 	
+	public static int size(){
+		return Fake.values().length;
+	}
+	
+	public static String getString(int i){
+		return Fake.values()[i].getFakeName();
+	}
+	
 	public static int indexOf(Fake fake) {
 		Fake[] fakes = Fake.values();
 		for (int i=0;i<fakes.length;i++) {
