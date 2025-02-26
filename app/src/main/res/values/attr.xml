@@ -1,17 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 	
-	<declare-styleable name="HourRadioGroup">
+	<declare-styleable name="ShiftRadioGroup">
 	    <attr name="text" format="string" />
-	    <attr name="m" format="integer"/>
-	    <attr name="n" format="integer"/>
+	    <attr name="pitch" format="integer"/>
+		<attr name="percent" format="integer"/>
+	    <attr name="num" format="integer"/>
+		<attr name="top" format="integer"/>
+	    <attr name="color" />
+	</declare-styleable>
+	
+	<declare-styleable name="RateRadioGroup">
+	    <attr name="text" format="string" />
+	    <attr name="pitch" format="integer"/>
+		<attr name="percent" format="integer"/>
+	    <attr name="num" format="integer"/>
+		<attr name="top" format="integer"/>
 	    <attr name="color" />
 	</declare-styleable>
 	
 	<declare-styleable name="FakeRadioGroup">
 	    <attr name="text" format="string" />
-	    <attr name="m" format="integer"/>
-	    <attr name="n" format="integer"/>
+	    <attr name="pitch" format="integer"/>
+		<attr name="percent" format="integer"/>
+	    <attr name="num" format="integer"/>
+		<attr name="top" format="integer"/>
+	    <attr name="color" />
+	</declare-styleable>
+	
+	<declare-styleable name="HourRadioGroup">
+	    <attr name="text" format="string" />
+	    <attr name="pitch" format="integer"/>
+		<attr name="percent" format="integer"/>
+	    <attr name="num" format="integer"/>
+		<attr name="top" format="integer"/>
 	    <attr name="color" />
 	</declare-styleable>
 	

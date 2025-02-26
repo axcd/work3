@@ -22,6 +22,14 @@ public enum Shift implements Serializable
 	public String getShiftName(){
 		return this.shift;
 	}
+
+	public static int size(){
+		return Shift.values().length;
+	}
+
+	public static String getString(int i){
+		return Shift.values()[i].getShiftName();
+	}
 	
 	public static int indexOf(Shift shift) {
 		Shift[] shifts = Shift.values();

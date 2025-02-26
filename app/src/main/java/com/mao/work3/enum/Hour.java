@@ -60,6 +60,14 @@ public enum Hour implements Serializable
 		return this.hour;
 	}
 	
+	public static int size(){
+		return Hour.values().length;
+	}
+
+	public static String getString(int i){
+		return Hour.values()[i].getHourName();
+	}
+	
 	public static int indexOf(Hour hour) {
 		Hour[] hours = Hour.values();
 		for (int i=0;i<hours.length;i++) {

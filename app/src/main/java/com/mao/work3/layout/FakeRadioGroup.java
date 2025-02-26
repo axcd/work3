@@ -11,13 +11,14 @@ import com.mao.work3.enum.*;
 
 public class FakeRadioGroup extends RadioGroup
 {
-	private int m;
-	private int n;
-	private int w;
-	private int h;
-	//public static int y;
+
+	private int num;
+	private int width;
+	private int height;
+	private int top;
+	private int pitch;
+	private int percent;
 	private int childCount = Fake.size();
-//	private String[] fakes = {"加班", "调休", "年假", "事假", "病假", "丧假", "护理假", "育儿假", "产假", "陪产假"};
 
 	public FakeRadioGroup(Context context)
 	{
@@ -30,23 +31,23 @@ public class FakeRadioGroup extends RadioGroup
 
 		//获取xml配置
 		TypedArray t = context.obtainStyledAttributes(attrs,R.styleable.FakeRadioGroup);
-		m = t.getInteger(R.styleable.FakeRadioGroup_m,15);
-		n = t.getInteger(R.styleable.FakeRadioGroup_n,6);
-
+		pitch = t.getInteger(R.styleable.FakeRadioGroup_pitch,15);
+		percent = t.getInteger(R.styleable.FakeRadioGroup_percent,50);
+		num = t.getInteger(R.styleable.FakeRadioGroup_num,6);
+		top = t.getInteger(R.styleable.FakeRadioGroup_top,6);
+		
 		for(int i=0;i<childCount;i++)
 		{
 			RadioButton rb = null;
-			if(i==0){
-				rb = (RadioButton)LayoutInflater.from(context).inflate(R.layout.page_two_update_fake_radio,null,false);
-				
-			}else{
-				rb = (RadioButton)LayoutInflater.from(context).inflate(R.layout.page_two_update_fake1_radio,null,false);
-			}
 			
+			rb = (RadioButton)LayoutInflater.from(context).inflate(R.layout.page_two_update_fake1_radio,null,false);
+			
+			if(i==0)
+				rb = (RadioButton)LayoutInflater.from(context).inflate(R.layout.page_two_update_fake_radio,null,false);
+
 			rb.setText(Fake.getString(i));
 			this.addView(rb);
 		}
-
 
 		childCount = getChildCount();
 
@@ -57,18 +58,20 @@ public class FakeRadioGroup extends RadioGroup
 	{
 		//获取最大宽度和
 		int maxWidth = MeasureSpec.getSize(widthMeasureSpec);
-		w = (maxWidth-m)/n-m;
-		h = w*3/5;
-		int maxHeight = (h+m)*(int)Math.ceil(childCount*1.0/n)+m;
 
-//		com.mao.work3.config.Config.setScroll(h+m);
-		//y = h+m;
+		width = (maxWidth-(num+1)*pitch)/num;
+		height = width*percent/100;
 
+		int maxHeight = (childCount/num+1)*(height+top)+top; 
+
+		if(childCount%num==0)
+			maxHeight -= height+top;
+			
 		for(int i=0;i<childCount;i++)
 		{
 			final View child = getChildAt(i);
-			int wm = MeasureSpec.makeMeasureSpec(w, MeasureSpec.EXACTLY);
-			int hm = MeasureSpec.makeMeasureSpec(h, MeasureSpec.EXACTLY);
+			int wm = MeasureSpec.makeMeasureSpec(width, MeasureSpec.EXACTLY);
+			int hm = MeasureSpec.makeMeasureSpec(height, MeasureSpec.EXACTLY);
 			//设置子类所需宽度和高度
 			child.measure(wm,hm);
 		}
@@ -87,7 +90,7 @@ public class FakeRadioGroup extends RadioGroup
 			View child = this.getChildAt(i);
 			if (child.getVisibility() != View.GONE)
 			{
-				child.layout((i%n)*(w+m)+m, (i/n)*(h+m)+m, (i%n+1)*(w+m), (i/n+1)*(h+m));	
+				child.layout((i%num)*(width+pitch)+pitch, (i/num)*(height+top)+top, (i%num+1)*(width+pitch), (i/num+1)*(height+top));	
 			}
 		}
 	}

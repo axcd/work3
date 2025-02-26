@@ -58,10 +58,10 @@ public class UpdateActivity extends AppCompatActivity
 		window.setGravity(Gravity.BOTTOM);	
 		window.setWindowAnimations(R.style.MyDialogAnimation);
 		
-		shiftRadioGroup = (RadioGroup)findViewById(R.id.shiftRadioGroup);
-		rateRadioGroup = (RadioGroup)findViewById(R.id.rateRadioGroup);
-		fakeRadioGroup = (RadioGroup)findViewById(R.id.fakeRadioGroup);
-		hourRadioGroup = (RadioGroup)findViewById(R.id.hourRadioGroup);
+		shiftRadioGroup = (ShiftRadioGroup)findViewById(R.id.shiftRadioGroup);
+		rateRadioGroup = (RateRadioGroup)findViewById(R.id.rateRadioGroup);
+		fakeRadioGroup = (FakeRadioGroup)findViewById(R.id.fakeRadioGroup);
+		hourRadioGroup = (HourRadioGroup)findViewById(R.id.hourRadioGroup);
 		dateText = (TextView)findViewById(R.id.txt_topbar);
 		hourScrollView = (ScrollView)findViewById(R.id.hourScrollView);
 		notesView = (TextView)findViewById(R.id.notesView);
@@ -78,9 +78,9 @@ public class UpdateActivity extends AppCompatActivity
 		dateText.setText(date);
 		//增加监听
 		addListener();
+		
 		//回显
 		display();
-		
 	}
 	
 	public void addListener()

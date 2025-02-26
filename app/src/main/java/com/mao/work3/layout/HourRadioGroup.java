@@ -7,15 +7,18 @@ import android.view.*;
 import com.mao.work3.*;
 import android.content.res.*;
 import com.mao.work3.config.*;
+import com.mao.work3.enum.*;
 
 public class HourRadioGroup extends RadioGroup
 {
-	private int m;
-	private int n;
-	private int w;
-	private int h;
+	private int num;
+	private int width;
+	private int height;
+	private int top;
+	private int pitch;
+	private int percent;
 	public static int y;
-	private int childCount = 49;
+	private int childCount = Hour.size();
 	
 	public HourRadioGroup(Context context)
 	{
@@ -28,17 +31,18 @@ public class HourRadioGroup extends RadioGroup
 
 		//获取xml配置
 		TypedArray t = context.obtainStyledAttributes(attrs,R.styleable.HourRadioGroup);
-		m = t.getInteger(R.styleable.HourRadioGroup_m,15);
-		n = t.getInteger(R.styleable.HourRadioGroup_n,6);
+		pitch = t.getInteger(R.styleable.HourRadioGroup_pitch,50);
+		percent = t.getInteger(R.styleable.HourRadioGroup_percent,50);
+		num = t.getInteger(R.styleable.HourRadioGroup_num,6);
+		top = t.getInteger(R.styleable.HourRadioGroup_top,6);
 		
 		for(int i=0;i<childCount;i++)
 		{
 			RadioButton rb = (RadioButton)LayoutInflater.from(context).inflate(R.layout.page_two_update_hour_radio,null,false);
-			if(i%2!=0) rb.setText(i*0.5+"h");else rb.setText(i/2+"h");
+			rb.setText(Hour.getString(i));
 			this.addView(rb);
 		}
 		
-
 		childCount = getChildCount();
 		
 	}
@@ -48,22 +52,26 @@ public class HourRadioGroup extends RadioGroup
 	{
 		//获取最大宽度和
 		int maxWidth = MeasureSpec.getSize(widthMeasureSpec);
-		w = (maxWidth-m)/n-m;
-		h = w*3/5;
-		int maxHeight = (h+m)*(int)Math.ceil(childCount*1.0/n)+m;
+
+		width = (maxWidth-(num+1)*pitch)/num;
+		height = width*percent/100;
 		
-//		com.mao.work3.config.Config.setScroll(h+m);
-		y = h+m;
+		int maxHeight = (childCount/num+1)*(height+top)+top; 
+
+		if(childCount%num==0)
+			maxHeight -= height+top;
+		
+		y = height+pitch;
 		
 		for(int i=0;i<childCount;i++)
 		{
 			final View child = getChildAt(i);
-			int wm = MeasureSpec.makeMeasureSpec(w, MeasureSpec.EXACTLY);
-			int hm = MeasureSpec.makeMeasureSpec(h, MeasureSpec.EXACTLY);
+			int wm = MeasureSpec.makeMeasureSpec(width, MeasureSpec.EXACTLY);
+			int hm = MeasureSpec.makeMeasureSpec(height, MeasureSpec.EXACTLY);
 			//设置子类所需宽度和高度
 			child.measure(wm,hm);
 		}
-		
+
 		// 设置容器所需的宽度和高度
 		setMeasuredDimension(maxWidth, maxHeight);
 	}
@@ -72,13 +80,13 @@ public class HourRadioGroup extends RadioGroup
 	protected void onLayout(boolean changed, int l, int t, int r, int b)
 	{
 		super.onLayout(changed, l, t, r, b);
-		
+
 		for (int i = 0; i < childCount; i++)
 		{
 			View child = this.getChildAt(i);
 			if (child.getVisibility() != View.GONE)
 			{
-				child.layout((i%n)*(w+m)+m, (i/n)*(h+m)+m, (i%n+1)*(w+m), (i/n+1)*(h+m));	
+				child.layout((i%num)*(width+pitch)+pitch, (i/num)*(height+top)+top, (i%num+1)*(width+pitch), (i/num+1)*(height+top));	
 			}
 		}
 	}

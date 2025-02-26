@@ -25,6 +25,14 @@ public enum Rate implements Serializable
 		return this.rate;
 	}
 	
+	public static int size(){
+		return Rate.values().length;
+	}
+
+	public static String getString(int i){
+		return Rate.values()[i].getRateName();
+	}
+	
 	public static int indexOf(Rate rate) {
 		Rate[] rates = Rate.values();
 		for (int i=0;i<rates.length;i++) {
