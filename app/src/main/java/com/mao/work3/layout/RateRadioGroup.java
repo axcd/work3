@@ -17,7 +17,7 @@ public class RateRadioGroup extends RadioGroup
 	private int top;
 	private int pitch;
 	private int percent;
-	private int childCount = Rate.size();
+	private int childCount ;//= Rate.size();
 
 	public RateRadioGroup(Context context)
 	{
@@ -27,7 +27,7 @@ public class RateRadioGroup extends RadioGroup
 	public RateRadioGroup(Context context, AttributeSet attrs)
 	{
 		super(context, attrs);
-
+		childCount = Rate.size();
 		//获取xml配置
 		TypedArray t = context.obtainStyledAttributes(attrs,R.styleable.RateRadioGroup);
 		pitch = t.getInteger(R.styleable.RateRadioGroup_pitch,15);
