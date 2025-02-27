@@ -67,7 +67,7 @@
 			android:layout_width="wrap_content"
 			android:background="#FFE3FEFE"
 			android:gravity="center"
-			mao:pitch="100"
+			mao:pitch="105"
 			mao:percent="45"
 			mao:num="3"
 			mao:top="20"
