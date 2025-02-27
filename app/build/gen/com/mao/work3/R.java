@@ -924,32 +924,6 @@ theme attribute (in the form
 containing a value of this type.
          */
         public static final int percent=0x7f0100cd;
-        /** <p>Must be an integer value, such as "<code>100</code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-<p>Must be an integer value, such as "<code>100</code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-<p>Must be an integer value, such as "<code>100</code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-<p>Must be an integer value, such as "<code>100</code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-         */
-        public static final int pitch=0x7f0100cc;
         /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
@@ -1364,6 +1338,32 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
         public static final int voiceIcon=0x7f010041;
+        /** <p>Must be an integer value, such as "<code>100</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+<p>Must be an integer value, such as "<code>100</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+<p>Must be an integer value, such as "<code>100</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+<p>Must be an integer value, such as "<code>100</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int width=0x7f0100cc;
         /** <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
 <p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
@@ -3616,16 +3616,16 @@ containing a value of this type.
            <tr><td><code>{@link #FakeRadioGroup_color com.mao.work3:color}</code></td><td></td></tr>
            <tr><td><code>{@link #FakeRadioGroup_num com.mao.work3:num}</code></td><td></td></tr>
            <tr><td><code>{@link #FakeRadioGroup_percent com.mao.work3:percent}</code></td><td></td></tr>
-           <tr><td><code>{@link #FakeRadioGroup_pitch com.mao.work3:pitch}</code></td><td></td></tr>
            <tr><td><code>{@link #FakeRadioGroup_text com.mao.work3:text}</code></td><td></td></tr>
            <tr><td><code>{@link #FakeRadioGroup_top com.mao.work3:top}</code></td><td></td></tr>
+           <tr><td><code>{@link #FakeRadioGroup_width com.mao.work3:width}</code></td><td></td></tr>
            </table>
            @see #FakeRadioGroup_color
            @see #FakeRadioGroup_num
            @see #FakeRadioGroup_percent
-           @see #FakeRadioGroup_pitch
            @see #FakeRadioGroup_text
            @see #FakeRadioGroup_top
+           @see #FakeRadioGroup_width
          */
         public static final int[] FakeRadioGroup = {
             0x7f010027, 0x7f0100cb, 0x7f0100cc, 0x7f0100cd,
@@ -3711,38 +3711,6 @@ containing a value of this type.
         */
         public static final int FakeRadioGroup_percent = 3;
         /**
-          <p>This symbol is the offset where the {@link com.mao.work3.R.attr#pitch}
-          attribute's value can be found in the {@link #FakeRadioGroup} array.
-
-
-          <p>Must be an integer value, such as "<code>100</code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-<p>Must be an integer value, such as "<code>100</code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-<p>Must be an integer value, such as "<code>100</code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-<p>Must be an integer value, such as "<code>100</code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-          @attr name com.mao.work3:pitch
-        */
-        public static final int FakeRadioGroup_pitch = 2;
-        /**
           <p>This symbol is the offset where the {@link com.mao.work3.R.attr#text}
           attribute's value can be found in the {@link #FakeRadioGroup} array.
 
@@ -3806,6 +3774,38 @@ containing a value of this type.
           @attr name com.mao.work3:top
         */
         public static final int FakeRadioGroup_top = 5;
+        /**
+          <p>This symbol is the offset where the {@link com.mao.work3.R.attr#width}
+          attribute's value can be found in the {@link #FakeRadioGroup} array.
+
+
+          <p>Must be an integer value, such as "<code>100</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+<p>Must be an integer value, such as "<code>100</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+<p>Must be an integer value, such as "<code>100</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+<p>Must be an integer value, such as "<code>100</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.mao.work3:width
+        */
+        public static final int FakeRadioGroup_width = 2;
         /** Attributes that can be used with a HourRadioGroup.
            <p>Includes the following attributes:</p>
            <table>
@@ -3815,16 +3815,16 @@ containing a value of this type.
            <tr><td><code>{@link #HourRadioGroup_color com.mao.work3:color}</code></td><td></td></tr>
            <tr><td><code>{@link #HourRadioGroup_num com.mao.work3:num}</code></td><td></td></tr>
            <tr><td><code>{@link #HourRadioGroup_percent com.mao.work3:percent}</code></td><td></td></tr>
-           <tr><td><code>{@link #HourRadioGroup_pitch com.mao.work3:pitch}</code></td><td></td></tr>
            <tr><td><code>{@link #HourRadioGroup_text com.mao.work3:text}</code></td><td></td></tr>
            <tr><td><code>{@link #HourRadioGroup_top com.mao.work3:top}</code></td><td></td></tr>
+           <tr><td><code>{@link #HourRadioGroup_width com.mao.work3:width}</code></td><td></td></tr>
            </table>
            @see #HourRadioGroup_color
            @see #HourRadioGroup_num
            @see #HourRadioGroup_percent
-           @see #HourRadioGroup_pitch
            @see #HourRadioGroup_text
            @see #HourRadioGroup_top
+           @see #HourRadioGroup_width
          */
         public static final int[] HourRadioGroup = {
             0x7f010027, 0x7f0100cb, 0x7f0100cc, 0x7f0100cd,
@@ -3910,38 +3910,6 @@ containing a value of this type.
         */
         public static final int HourRadioGroup_percent = 3;
         /**
-          <p>This symbol is the offset where the {@link com.mao.work3.R.attr#pitch}
-          attribute's value can be found in the {@link #HourRadioGroup} array.
-
-
-          <p>Must be an integer value, such as "<code>100</code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-<p>Must be an integer value, such as "<code>100</code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-<p>Must be an integer value, such as "<code>100</code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-<p>Must be an integer value, such as "<code>100</code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-          @attr name com.mao.work3:pitch
-        */
-        public static final int HourRadioGroup_pitch = 2;
-        /**
           <p>This symbol is the offset where the {@link com.mao.work3.R.attr#text}
           attribute's value can be found in the {@link #HourRadioGroup} array.
 
@@ -4005,6 +3973,38 @@ containing a value of this type.
           @attr name com.mao.work3:top
         */
         public static final int HourRadioGroup_top = 5;
+        /**
+          <p>This symbol is the offset where the {@link com.mao.work3.R.attr#width}
+          attribute's value can be found in the {@link #HourRadioGroup} array.
+
+
+          <p>Must be an integer value, such as "<code>100</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+<p>Must be an integer value, such as "<code>100</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+<p>Must be an integer value, such as "<code>100</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+<p>Must be an integer value, such as "<code>100</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.mao.work3:width
+        */
+        public static final int HourRadioGroup_width = 2;
         /** Attributes that can be used with a LinearLayoutCompat.
            <p>Includes the following attributes:</p>
            <table>
@@ -4595,16 +4595,16 @@ containing a value of this type.
            <tr><td><code>{@link #RateRadioGroup_color com.mao.work3:color}</code></td><td></td></tr>
            <tr><td><code>{@link #RateRadioGroup_num com.mao.work3:num}</code></td><td></td></tr>
            <tr><td><code>{@link #RateRadioGroup_percent com.mao.work3:percent}</code></td><td></td></tr>
-           <tr><td><code>{@link #RateRadioGroup_pitch com.mao.work3:pitch}</code></td><td></td></tr>
            <tr><td><code>{@link #RateRadioGroup_text com.mao.work3:text}</code></td><td></td></tr>
            <tr><td><code>{@link #RateRadioGroup_top com.mao.work3:top}</code></td><td></td></tr>
+           <tr><td><code>{@link #RateRadioGroup_width com.mao.work3:width}</code></td><td></td></tr>
            </table>
            @see #RateRadioGroup_color
            @see #RateRadioGroup_num
            @see #RateRadioGroup_percent
-           @see #RateRadioGroup_pitch
            @see #RateRadioGroup_text
            @see #RateRadioGroup_top
+           @see #RateRadioGroup_width
          */
         public static final int[] RateRadioGroup = {
             0x7f010027, 0x7f0100cb, 0x7f0100cc, 0x7f0100cd,
@@ -4690,38 +4690,6 @@ containing a value of this type.
         */
         public static final int RateRadioGroup_percent = 3;
         /**
-          <p>This symbol is the offset where the {@link com.mao.work3.R.attr#pitch}
-          attribute's value can be found in the {@link #RateRadioGroup} array.
-
-
-          <p>Must be an integer value, such as "<code>100</code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-<p>Must be an integer value, such as "<code>100</code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-<p>Must be an integer value, such as "<code>100</code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-<p>Must be an integer value, such as "<code>100</code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-          @attr name com.mao.work3:pitch
-        */
-        public static final int RateRadioGroup_pitch = 2;
-        /**
           <p>This symbol is the offset where the {@link com.mao.work3.R.attr#text}
           attribute's value can be found in the {@link #RateRadioGroup} array.
 
@@ -4785,6 +4753,38 @@ containing a value of this type.
           @attr name com.mao.work3:top
         */
         public static final int RateRadioGroup_top = 5;
+        /**
+          <p>This symbol is the offset where the {@link com.mao.work3.R.attr#width}
+          attribute's value can be found in the {@link #RateRadioGroup} array.
+
+
+          <p>Must be an integer value, such as "<code>100</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+<p>Must be an integer value, such as "<code>100</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+<p>Must be an integer value, such as "<code>100</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+<p>Must be an integer value, such as "<code>100</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.mao.work3:width
+        */
+        public static final int RateRadioGroup_width = 2;
         /** Attributes that can be used with a SearchView.
            <p>Includes the following attributes:</p>
            <table>
@@ -5009,16 +5009,16 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
            <tr><td><code>{@link #ShiftRadioGroup_color com.mao.work3:color}</code></td><td></td></tr>
            <tr><td><code>{@link #ShiftRadioGroup_num com.mao.work3:num}</code></td><td></td></tr>
            <tr><td><code>{@link #ShiftRadioGroup_percent com.mao.work3:percent}</code></td><td></td></tr>
-           <tr><td><code>{@link #ShiftRadioGroup_pitch com.mao.work3:pitch}</code></td><td></td></tr>
            <tr><td><code>{@link #ShiftRadioGroup_text com.mao.work3:text}</code></td><td></td></tr>
            <tr><td><code>{@link #ShiftRadioGroup_top com.mao.work3:top}</code></td><td></td></tr>
+           <tr><td><code>{@link #ShiftRadioGroup_width com.mao.work3:width}</code></td><td></td></tr>
            </table>
            @see #ShiftRadioGroup_color
            @see #ShiftRadioGroup_num
            @see #ShiftRadioGroup_percent
-           @see #ShiftRadioGroup_pitch
            @see #ShiftRadioGroup_text
            @see #ShiftRadioGroup_top
+           @see #ShiftRadioGroup_width
          */
         public static final int[] ShiftRadioGroup = {
             0x7f010027, 0x7f0100cb, 0x7f0100cc, 0x7f0100cd,
@@ -5104,38 +5104,6 @@ containing a value of this type.
         */
         public static final int ShiftRadioGroup_percent = 3;
         /**
-          <p>This symbol is the offset where the {@link com.mao.work3.R.attr#pitch}
-          attribute's value can be found in the {@link #ShiftRadioGroup} array.
-
-
-          <p>Must be an integer value, such as "<code>100</code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-<p>Must be an integer value, such as "<code>100</code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-<p>Must be an integer value, such as "<code>100</code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-<p>Must be an integer value, such as "<code>100</code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-          @attr name com.mao.work3:pitch
-        */
-        public static final int ShiftRadioGroup_pitch = 2;
-        /**
           <p>This symbol is the offset where the {@link com.mao.work3.R.attr#text}
           attribute's value can be found in the {@link #ShiftRadioGroup} array.
 
@@ -5199,6 +5167,38 @@ containing a value of this type.
           @attr name com.mao.work3:top
         */
         public static final int ShiftRadioGroup_top = 5;
+        /**
+          <p>This symbol is the offset where the {@link com.mao.work3.R.attr#width}
+          attribute's value can be found in the {@link #ShiftRadioGroup} array.
+
+
+          <p>Must be an integer value, such as "<code>100</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+<p>Must be an integer value, such as "<code>100</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+<p>Must be an integer value, such as "<code>100</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+<p>Must be an integer value, such as "<code>100</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.mao.work3:width
+        */
+        public static final int ShiftRadioGroup_width = 2;
         /** Attributes that can be used with a Spinner.
            <p>Includes the following attributes:</p>
            <table>

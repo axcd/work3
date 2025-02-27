@@ -30,7 +30,7 @@ public class ShiftRadioGroup extends RadioGroup
 
 		//获取xml配置
 		TypedArray t = context.obtainStyledAttributes(attrs,R.styleable.ShiftRadioGroup);
-		pitch = t.getInteger(R.styleable.ShiftRadioGroup_pitch,15);
+		width = t.getInteger(R.styleable.ShiftRadioGroup_width,15);
 		percent = t.getInteger(R.styleable.ShiftRadioGroup_percent,80);
 		num = t.getInteger(R.styleable.ShiftRadioGroup_num,6);
 		top = t.getInteger(R.styleable.ShiftRadioGroup_top,6);
@@ -64,7 +64,7 @@ public class ShiftRadioGroup extends RadioGroup
 		//获取最大宽度和
 		int maxWidth = MeasureSpec.getSize(widthMeasureSpec);
 
-		width = (maxWidth-(num+1)*pitch)/num;
+		pitch = (maxWidth-num*width)/(num+1);
 		height = width*percent/100;
 
 		int maxHeight = (childCount/num+1)*(height+top)+top; 

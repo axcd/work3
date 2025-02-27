@@ -31,7 +31,7 @@ public class FakeRadioGroup extends RadioGroup
 
 		//获取xml配置
 		TypedArray t = context.obtainStyledAttributes(attrs,R.styleable.FakeRadioGroup);
-		pitch = t.getInteger(R.styleable.FakeRadioGroup_pitch,15);
+		width = t.getInteger(R.styleable.FakeRadioGroup_width,15);
 		percent = t.getInteger(R.styleable.FakeRadioGroup_percent,50);
 		num = t.getInteger(R.styleable.FakeRadioGroup_num,6);
 		top = t.getInteger(R.styleable.FakeRadioGroup_top,6);
@@ -59,7 +59,7 @@ public class FakeRadioGroup extends RadioGroup
 		//获取最大宽度和
 		int maxWidth = MeasureSpec.getSize(widthMeasureSpec);
 
-		width = (maxWidth-(num+1)*pitch)/num;
+		pitch = (maxWidth-num*width)/(num+1);
 		height = width*percent/100;
 
 		int maxHeight = (childCount/num+1)*(height+top)+top; 

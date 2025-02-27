@@ -30,7 +30,7 @@ public class RateRadioGroup extends RadioGroup
 		childCount = Rate.size();
 		//获取xml配置
 		TypedArray t = context.obtainStyledAttributes(attrs,R.styleable.RateRadioGroup);
-		pitch = t.getInteger(R.styleable.RateRadioGroup_pitch,15);
+		width = t.getInteger(R.styleable.RateRadioGroup_width,15);
 		percent = t.getInteger(R.styleable.RateRadioGroup_percent,50);
 		num = t.getInteger(R.styleable.RateRadioGroup_num,6);
 		top = t.getInteger(R.styleable.RateRadioGroup_top,6);
@@ -60,7 +60,10 @@ public class RateRadioGroup extends RadioGroup
 		//获取最大宽度和
 		int maxWidth = MeasureSpec.getSize(widthMeasureSpec);
 		
-		width = (maxWidth-(num+1)*pitch)/num;
+		//width = (maxWidth-(num+1)*pitch)/num;
+		
+		pitch = (maxWidth-num*width)/(num+1);
+		
 		height = width*percent/100;
 		
 		int maxHeight = (childCount/num+1)*(height+top)+top; 
